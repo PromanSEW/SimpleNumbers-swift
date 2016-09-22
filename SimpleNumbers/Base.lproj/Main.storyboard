@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleNumbers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="GqQ-nX-e87">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Простые числа и делители" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qU5-N8-7Z7">
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите число" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYw-k5-7cB">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lu6-5f-Ike">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00P-3a-14O">
+                                        <state key="normal" title="Вычислить"/>
+                                        <connections>
+                                            <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AfG-rk-OHg"/>
+                                        </connections>
+                                    </button>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHD-dX-HsQ">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddn-eF-1cj">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ddn-eF-1cj" secondAttribute="trailing" id="2gX-9u-1C8"/>
+                                            <constraint firstAttribute="bottom" secondItem="ddn-eF-1cj" secondAttribute="bottom" id="CpK-jB-7JC"/>
+                                            <constraint firstItem="ddn-eF-1cj" firstAttribute="top" secondItem="VHD-dX-HsQ" secondAttribute="top" id="FlL-Az-XPG"/>
+                                            <constraint firstItem="ddn-eF-1cj" firstAttribute="leading" secondItem="VHD-dX-HsQ" secondAttribute="leading" id="zvn-iN-NT6"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="00P-3a-14O" firstAttribute="leading" secondItem="GqQ-nX-e87" secondAttribute="leading" id="0sn-St-qTe"/>
+                                    <constraint firstAttribute="trailing" secondItem="VHD-dX-HsQ" secondAttribute="trailing" id="MG3-YA-ghB"/>
+                                    <constraint firstAttribute="trailing" secondItem="00P-3a-14O" secondAttribute="trailing" id="X04-aQ-GAA"/>
+                                    <constraint firstItem="lu6-5f-Ike" firstAttribute="leading" secondItem="GqQ-nX-e87" secondAttribute="leading" id="Zlw-iq-gd9"/>
+                                    <constraint firstAttribute="bottom" secondItem="VHD-dX-HsQ" secondAttribute="bottom" id="acS-UU-EH9"/>
+                                    <constraint firstAttribute="trailing" secondItem="lu6-5f-Ike" secondAttribute="trailing" id="adn-IR-J2f"/>
+                                    <constraint firstItem="VHD-dX-HsQ" firstAttribute="leading" secondItem="GqQ-nX-e87" secondAttribute="leading" id="v7X-Y1-0J0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GqQ-nX-e87" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="Nkz-lX-C8s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GqQ-nX-e87" secondAttribute="trailing" id="TY1-ol-03W"/>
+                            <constraint firstItem="GqQ-nX-e87" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Tb5-eM-Lbq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GqQ-nX-e87" secondAttribute="bottom" constant="12" id="Xho-Gy-WqG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calcButton" destination="00P-3a-14O" id="ywx-nq-tf9"/>
+                        <outlet property="numberTextField" destination="lu6-5f-Ike" id="7P9-PX-woE"/>
+                        <outlet property="result" destination="ddn-eF-1cj" id="M1R-x0-xfx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="121.88905547226388"/>
+        </scene>
+    </scenes>
+</document>
