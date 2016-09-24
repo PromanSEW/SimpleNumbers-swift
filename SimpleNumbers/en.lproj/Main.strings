@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Вычислить"; ObjectID = "00P-3a-14O"; */
+"00P-3a-14O.normalTitle" = "Calculate";
+
+/* Class = "UILabel"; text = "Введите число"; ObjectID = "MYw-k5-7cB"; */
+"MYw-k5-7cB.text" = "Enter number";
+
+/* Class = "UILabel"; text = "Result"; ObjectID = "ddn-eF-1cj"; */
+"ddn-eF-1cj.text" = "Result";
+
+/* Class = "UILabel"; text = "Простые числа и делители"; ObjectID = "qU5-N8-7Z7"; */
+"qU5-N8-7Z7.text" = "Simple numbers and delims";

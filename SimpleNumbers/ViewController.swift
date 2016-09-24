@@ -22,18 +22,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	}
 
 	@IBAction func calculate(_ sender: UIButton) {
-		let n = Int(numberTextField.text!)!
-		var dels = 0
+		let n = UInt(numberTextField.text!)!
+		var divs = 0
 		result.text = ""
-		result.text?.append("Делители числа \(n):\n")
+		result.text?.append(String(format: NSLocalizedString("dividers", comment: "Делители числа n"), n))
 		for i in 1...n {
 			if n % i == 0 {
 				result.text?.append("\(i)\n")
-				dels += 1
+				divs += 1
 			}
 		}
-		if dels == 2 {
-			result.text?.append("Число \(n) является простым")
+		if divs == 2 {
+			result.text?.append(String(format: NSLocalizedString("simple", comment: "Число n является простым"), n))
 		}
 	}
 }
